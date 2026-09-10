@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qadeercoffee.co/sitemap.xml
