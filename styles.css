@@ -270,6 +270,13 @@ textarea {
   margin-top: 24px;
 }
 
+.hero-trust-note {
+  margin: 14px 0 0;
+  color: var(--green-2);
+  font-size: 0.9rem;
+  font-weight: 760;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -568,27 +575,19 @@ textarea {
 
 .events-grid {
   grid-template-columns: repeat(4, minmax(220px, 1fr));
+  align-items: start;
 }
 
 .event-card-photo {
   display: block;
   width: 100%;
-  aspect-ratio: 6 / 5;
+  height: auto;
   margin: 0 0 26px;
-  object-fit: cover;
   border-radius: 6px;
 }
 
 .event-card-photo-placeholder {
   visibility: hidden;
-}
-
-.wedding-card-photo {
-  object-position: center 68%;
-}
-
-.anthro-card-photo {
-  object-position: center 68%;
 }
 
 .package-card,
@@ -656,15 +655,13 @@ textarea {
 }
 
 .event-card {
-  display: grid;
-  min-height: 330px;
+  display: block;
+  min-height: 0;
   padding: 26px 22px 28px;
 }
 
 .event-card-link {
-  display: grid;
-  grid-template-rows: auto 82px auto auto;
-  height: 100%;
+  display: block;
   color: inherit;
 }
 
@@ -747,7 +744,7 @@ textarea {
 }
 
 .event-card h3 {
-  margin-bottom: 0;
+  margin-bottom: 18px;
 }
 
 .event-card-photo {
@@ -865,9 +862,7 @@ textarea {
 .story-photo img {
   display: block;
   width: 100%;
-  aspect-ratio: 5 / 4;
-  object-fit: cover;
-  object-position: center 82%;
+  height: auto;
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: 0 18px 54px rgba(20, 62, 20, 0.13);
@@ -1385,7 +1380,18 @@ body.show-floating .floating-book {
   }
 
   .hero-actions {
+    display: flex;
+    margin-top: 18px;
+  }
+
+  .hero-actions .button-secondary {
     display: none;
+  }
+
+  .hero-trust-note {
+    max-width: 26ch;
+    margin-top: 12px;
+    font-size: 0.82rem;
   }
 
   .corporate-copy {
@@ -1427,7 +1433,7 @@ body.show-floating .floating-book {
   }
 
   .story-photo img {
-    aspect-ratio: 4 / 3;
+    height: auto;
   }
 
   .section-heading .eyebrow {
@@ -1507,7 +1513,12 @@ body.show-floating .floating-book {
   }
 
   .hero-actions {
-    display: none;
+    display: flex;
+    margin-top: 18px;
+  }
+
+  .hero-actions .button-primary {
+    width: 100%;
   }
 
   .button {
