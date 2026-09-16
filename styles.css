@@ -575,14 +575,16 @@ textarea {
 
 .events-grid {
   grid-template-columns: repeat(4, minmax(220px, 1fr));
-  align-items: start;
+  align-items: stretch;
 }
 
 .event-card-photo {
   display: block;
   width: 100%;
-  height: auto;
+  height: 330px;
   margin: 0 0 26px;
+  object-fit: contain;
+  background: var(--cream);
   border-radius: 6px;
 }
 
@@ -655,13 +657,15 @@ textarea {
 }
 
 .event-card {
-  display: block;
-  min-height: 0;
+  display: flex;
+  min-height: 610px;
   padding: 26px 22px 28px;
 }
 
 .event-card-link {
-  display: block;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   color: inherit;
 }
 
@@ -744,6 +748,7 @@ textarea {
 }
 
 .event-card h3 {
+  min-height: 2.1em;
   margin-bottom: 18px;
 }
 
@@ -762,6 +767,7 @@ textarea {
 
 .event-card p {
   margin-bottom: 0;
+  margin-top: auto;
   line-height: 1.45;
 }
 
@@ -1545,6 +1551,14 @@ body.show-floating .floating-book {
 
   .events-grid {
     grid-template-columns: repeat(4, minmax(258px, 1fr));
+  }
+
+  .event-card {
+    min-height: 560px;
+  }
+
+  .event-card-photo {
+    height: 300px;
   }
 
   .testimonial-carousel {
