@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Qadeer Coffee test site",
+      "type": "shell",
+      "command": "python3 -m http.server 4174 --directory \"${workspaceFolder}\"",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    }
+  ]
+}
