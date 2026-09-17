@@ -425,9 +425,24 @@ textarea {
 
 .text-link {
   display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: var(--green);
   font-weight: 860;
-  border-bottom: 2px solid var(--honey);
+  transition: color 160ms ease;
+}
+
+.text-link::after {
+  content: "→";
+  transition: transform 160ms ease;
+}
+
+.text-link:hover {
+  color: var(--green-3);
+}
+
+.text-link:hover::after {
+  transform: translateX(4px);
 }
 
 .inline-photo {
@@ -711,9 +726,7 @@ textarea {
 
 .event-card:hover .event-card-link h3,
 .event-card:focus-within .event-card-link h3 {
-  text-decoration: underline;
-  text-decoration-color: var(--honey);
-  text-underline-offset: 5px;
+  color: var(--green-3);
 }
 
 .package-card::before {
@@ -1830,6 +1843,20 @@ body.show-floating .floating-book {
   border-block: 1px solid var(--line);
 }
 
+.home-service-section {
+  padding: clamp(64px, 8vw, 108px) 0;
+  background: var(--paper);
+  border-block: 1px solid var(--line);
+}
+
+.home-service-section .photo-story-media {
+  justify-items: end;
+}
+
+.home-service-section .photo-card {
+  width: min(100%, 500px);
+}
+
 .press-section {
   padding: clamp(48px, 6vw, 82px) 0;
   border-bottom: 1px solid var(--line);
@@ -1933,7 +1960,18 @@ body.show-floating .floating-book {
 .quick-links a {
   color: var(--green);
   font-weight: 760;
-  border-bottom: 1px solid var(--honey);
+  transition: color 160ms ease;
+}
+
+.quick-links a:hover {
+  color: var(--green-3);
+}
+
+.text-link:focus-visible,
+.quick-links a:focus-visible {
+  outline: 3px solid var(--honey);
+  outline-offset: 4px;
+  border-radius: 3px;
 }
 
 .article-grid,
