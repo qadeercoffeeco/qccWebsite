@@ -21,7 +21,7 @@
       gtag("config", "G-YESCRDH3H0");
     </script>
     <script src="analytics-events.js" defer></script>
-    <link rel="stylesheet" href="styles.css?v=service-polish-20260917">
+    <link rel="stylesheet" href="styles.css?v=chic-home-20260918">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -97,13 +97,20 @@
           <span></span><span></span><span></span><span class="sr-only">Menu</span>
         </button>
         <nav class="primary-nav" id="primary-nav" data-nav>
-          <a href="coffee-catering-services.html">Services</a>
-          <a href="wedding-coffee-catering-nj-nyc-pa.html">Weddings</a>
-          <a href="corporate-coffee-catering-nyc-nj-pa.html">Corporate</a>
-          <a href="conference-coffee-catering-trade-shows.html">Conferences</a>
-          <a href="index.html#packages">Packages</a>
+          <details class="nav-dropdown" data-nav-dropdown>
+            <summary>Events <span aria-hidden="true">⌄</span></summary>
+            <div class="nav-dropdown-panel">
+              <a href="wedding-coffee-catering-nj-nyc-pa.html">Weddings and showers</a>
+              <a href="corporate-coffee-catering-nyc-nj-pa.html">Company events</a>
+              <a href="corporate-coffee-catering-nyc-nj-pa.html#brand-activations">Brand activations</a>
+              <a href="conference-coffee-catering-trade-shows.html">Conferences and trade shows</a>
+              <a href="index.html#private-events">Private celebrations</a>
+            </div>
+          </details>
+          <a href="index.html#packages">What we serve</a>
+          <a href="index.html#story">Our story</a>
         </nav>
-        <a class="header-cta" href="index.html#contact">Tell us about your event</a>
+        <a class="header-cta" href="index.html#contact">Check your date</a>
       </div>
     </header>
 
@@ -358,14 +365,6 @@
         </div>
       </div>
     </footer>
-    <script>
-      const toggle = document.querySelector("[data-menu-toggle]");
-      if (toggle) {
-        toggle.addEventListener("click", () => {
-          const isOpen = document.body.classList.toggle("menu-open");
-          toggle.setAttribute("aria-expanded", String(isOpen));
-        });
-      }
-    </script>
+    <script src="script.js?v=dropdown-home-20260918"></script>
   </body>
 </html>
