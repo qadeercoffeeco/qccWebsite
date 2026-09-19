@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <title>Mobile Coffee Cart Catering in NJ, NYC &amp; PA | Qadeer Coffee Co</title>
     <meta
       name="description"
@@ -15,9 +16,11 @@
       content="Premium coffee, matcha, and mocktail carts for weddings, corporate events, brand activations, and private parties."
     >
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://qadeercoffee.co/">
     <meta property="og:image" content="https://qadeercoffee.co/assets/cart-at-event.jpg">
     <meta name="twitter:card" content="summary_large_image">
+    <link rel="preload" as="image" href="assets/cart-at-event.jpg?v=optimized" fetchpriority="high">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YESCRDH3H0"></script>
     <script>
@@ -31,10 +34,18 @@
       {
         "@context": "https://schema.org",
         "@type": ["LocalBusiness", "FoodEstablishment"],
+        "@id": "https://qadeercoffee.co/#business",
         "name": "Qadeer Coffee Co",
         "url": "https://qadeercoffee.co/",
         "image": "https://qadeercoffee.co/assets/cart-at-event.jpg",
         "logo": "https://qadeercoffee.co/assets/qadeer-logo-mark.svg",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Princeton",
+          "addressRegion": "NJ",
+          "addressCountry": "US"
+        },
         "description": "Mobile coffee, matcha, and mocktail cart catering for weddings, corporate events, office activations, private parties, campuses, and popups.",
         "areaServed": [
           "Pennsylvania",
@@ -117,7 +128,18 @@
         }
       }
     </script>
-    <link rel="stylesheet" href="styles.css?v=chic-home-20260918">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://qadeercoffee.co/#website",
+        "url": "https://qadeercoffee.co/",
+        "name": "Qadeer Coffee Co",
+        "publisher": {"@id": "https://qadeercoffee.co/#business"},
+        "inLanguage": "en-US"
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css?v=mobile-seo-20260919">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -172,7 +194,7 @@
           </div>
           <figure class="hero-card">
             <img src="assets/cart-at-event.jpg?v=optimized" width="1350" height="1800" fetchpriority="high" decoding="async" alt="Qadeer Coffee Co mobile coffee cart set up at an event">
-            <figcaption>Your favorite cafe, wherever you are celebrating.</figcaption>
+            <figcaption class="image-caption">Your favorite cafe, wherever you are celebrating.</figcaption>
           </figure>
         </div>
       </section>
@@ -192,7 +214,7 @@
             <p class="eyebrow">Pick your plans</p>
             <h2 id="events-title">What are we showing up for?</h2>
             <p>
-              Big day, busy office, or just a very good reason to get together. We bring the cart and make every drink fresh.
+              Weddings, work days, and every good reason to gather.
             </p>
           </div>
 
@@ -211,7 +233,7 @@
 
             <article class="event-card">
               <a class="event-card-link" href="corporate-coffee-catering-nyc-nj-pa.html" aria-label="Explore corporate coffee catering">
-                <img class="event-card-photo" src="assets/googlecup.jpg" width="1271" height="1052" decoding="async" alt="Qadeer Coffee Co branded drinks for a corporate event">
+                <img class="event-card-photo" src="assets/googlecup.jpg" width="1271" height="1052" loading="lazy" decoding="async" alt="Qadeer Coffee Co branded drinks for a corporate event">
                 <div class="event-card-copy">
                   <span>Company events</span>
                   <h3>Give the team a better coffee break.</h3>
@@ -223,7 +245,7 @@
 
             <article class="event-card">
               <a class="event-card-link" href="corporate-coffee-catering-nyc-nj-pa.html#brand-activations" aria-label="Explore brand activation coffee carts">
-                <img class="event-card-photo" src="assets/anthro.jpg" width="2268" height="4032" decoding="async" alt="Qadeer Coffee Co drinks served at an Anthropologie brand activation">
+                <img class="event-card-photo" src="assets/anthro.jpg" width="2268" height="4032" loading="lazy" decoding="async" alt="Qadeer Coffee Co drinks served at an Anthropologie brand activation">
                 <div class="event-card-copy">
                   <span>Brand activations</span>
                   <h3>Make the cart part of the campaign.</h3>
@@ -247,7 +269,7 @@
 
             <article class="event-card" id="private-events">
               <a class="event-card-link" href="coffee-catering-services.html" aria-label="Explore private event coffee catering">
-                <img class="event-card-photo" src="assets/private-parties.jpg" width="1536" height="2304" decoding="async" alt="Qadeer Coffee Co drinks served at a private party">
+                <img class="event-card-photo" src="assets/private-parties.jpg" width="1536" height="2304" loading="lazy" decoding="async" alt="Qadeer Coffee Co drinks served at a private party">
                 <div class="event-card-copy">
                   <span>Private celebrations</span>
                   <h3>Bring the cafe to your favorite people.</h3>
@@ -266,24 +288,24 @@
         </div>
         <div class="logo-marquee" aria-label="Featured client logos">
           <div class="logo-track">
-            <img src="assets/logo-ut-320.png" width="320" height="83" decoding="async" alt="University of Texas">
-            <img src="assets/logo-braze-320.png" width="320" height="149" decoding="async" alt="Braze">
-            <img src="assets/logo-greystar-320.png" width="172" height="320" decoding="async" alt="Greystar">
-            <img class="logo-google" src="assets/logo-google.svg" width="320" height="106" decoding="async" alt="Google">
-            <img src="assets/logo-anthropologie-320.png" width="320" height="19" decoding="async" alt="Anthropologie">
-            <img src="assets/logo-ascension-320.png" width="320" height="76" decoding="async" alt="Ascension">
-            <img class="logo-impiricus" src="assets/logo-impiricus.svg?v=impiricus-colors" width="320" height="139" decoding="async" alt="Impiricus">
-            <img class="logo-starcom" src="assets/logo-starcom-320.png" width="320" height="154" decoding="async" alt="Starcom">
-            <img class="logo-tcnj" src="assets/logo-tcnj-320.png" width="320" height="114" decoding="async" alt="The College of New Jersey">
-            <img src="assets/logo-ut-320.png" width="320" height="83" decoding="async" alt="">
-            <img src="assets/logo-braze-320.png" width="320" height="149" decoding="async" alt="">
-            <img src="assets/logo-greystar-320.png" width="172" height="320" decoding="async" alt="">
-            <img class="logo-google" src="assets/logo-google.svg" width="320" height="106" decoding="async" alt="">
-            <img src="assets/logo-anthropologie-320.png" width="320" height="19" decoding="async" alt="">
-            <img src="assets/logo-ascension-320.png" width="320" height="76" decoding="async" alt="">
-            <img class="logo-impiricus" src="assets/logo-impiricus.svg?v=impiricus-colors" width="320" height="139" decoding="async" alt="">
-            <img class="logo-starcom" src="assets/logo-starcom-320.png" width="320" height="154" decoding="async" alt="">
-            <img class="logo-tcnj" src="assets/logo-tcnj-320.png" width="320" height="114" decoding="async" alt="">
+            <img src="assets/logo-ut-320.png" width="320" height="83" loading="lazy" decoding="async" alt="University of Texas">
+            <img src="assets/logo-braze-320.png" width="320" height="149" loading="lazy" decoding="async" alt="Braze">
+            <img src="assets/logo-greystar-320.png" width="172" height="320" loading="lazy" decoding="async" alt="Greystar">
+            <img class="logo-google" src="assets/logo-google.svg" width="320" height="106" loading="lazy" decoding="async" alt="Google">
+            <img src="assets/logo-anthropologie-320.png" width="320" height="19" loading="lazy" decoding="async" alt="Anthropologie">
+            <img src="assets/logo-ascension-320.png" width="320" height="76" loading="lazy" decoding="async" alt="Ascension">
+            <img class="logo-impiricus" src="assets/logo-impiricus.svg?v=impiricus-colors" width="320" height="139" loading="lazy" decoding="async" alt="Impiricus">
+            <img class="logo-starcom" src="assets/logo-starcom-320.png" width="320" height="154" loading="lazy" decoding="async" alt="Starcom">
+            <img class="logo-tcnj" src="assets/logo-tcnj-320.png" width="320" height="114" loading="lazy" decoding="async" alt="The College of New Jersey">
+            <img src="assets/logo-ut-320.png" width="320" height="83" loading="lazy" decoding="async" alt="">
+            <img src="assets/logo-braze-320.png" width="320" height="149" loading="lazy" decoding="async" alt="">
+            <img src="assets/logo-greystar-320.png" width="172" height="320" loading="lazy" decoding="async" alt="">
+            <img class="logo-google" src="assets/logo-google.svg" width="320" height="106" loading="lazy" decoding="async" alt="">
+            <img src="assets/logo-anthropologie-320.png" width="320" height="19" loading="lazy" decoding="async" alt="">
+            <img src="assets/logo-ascension-320.png" width="320" height="76" loading="lazy" decoding="async" alt="">
+            <img class="logo-impiricus" src="assets/logo-impiricus.svg?v=impiricus-colors" width="320" height="139" loading="lazy" decoding="async" alt="">
+            <img class="logo-starcom" src="assets/logo-starcom-320.png" width="320" height="154" loading="lazy" decoding="async" alt="">
+            <img class="logo-tcnj" src="assets/logo-tcnj-320.png" width="320" height="114" loading="lazy" decoding="async" alt="">
           </div>
         </div>
       </section>
@@ -293,18 +315,17 @@
           <div class="photo-story-copy">
             <p class="eyebrow">For company events</p>
             <h2 id="brand-proof-title">Put your brand right in the experience.</h2>
-            <p>We can build the menu around your team, add branded cups and stickers, and print approved artwork or logos directly onto select lattes.</p>
-            <p>It is a small detail guests notice, photograph, and remember.</p>
+            <p>Custom menus, branded cups, stickers, and latte art make the cart feel like part of your event.</p>
             <a class="button button-secondary" href="corporate-coffee-catering-nyc-nj-pa.html#brand-activations">Explore corporate events</a>
           </div>
           <div class="photo-story-media photo-story-media-pair">
             <figure class="photo-card">
               <img src="assets/google-event-service.jpg" width="1280" height="1920" loading="lazy" decoding="async" alt="Qadeer Coffee Co barista preparing drinks beside Google branded cups at a company event">
-              <figcaption>Custom cup branding for company events</figcaption>
+              <figcaption class="image-caption">Custom cup branding for company events</figcaption>
             </figure>
             <figure class="photo-card">
               <img src="assets/branded-latte-art.jpg" width="1280" height="1920" loading="lazy" decoding="async" alt="Cheetah artwork printed onto a hot latte by the Qadeer Coffee Co latte art printer">
-              <figcaption>Artwork printed directly onto a latte</figcaption>
+              <figcaption class="image-caption">Artwork printed directly onto a latte</figcaption>
             </figure>
           </div>
         </div>
@@ -330,11 +351,10 @@
               <span>Best for full events</span>
               <h3>Full service</h3>
               <p class="starting-price">Starts at $1,000</p>
-              <p>Espresso, freshly whisked matcha, and mocktails with premium garnish.</p>
+              <p>Espresso, matcha, and mocktails in one cart.</p>
               <ul>
-              <li>House made syrups, signature purées, pastes, and cold foams</li>
-                <li>Customizable menu</li>
-                <li>Great for weddings, corporate events, and parties</li>
+                <li>House made flavors and cold foams</li>
+                <li>Custom menu and branding</li>
               </ul>
             </article>
 
@@ -342,10 +362,10 @@
               <span>Coffee bar</span>
               <h3>Espresso</h3>
               <p class="starting-price">Starts at $800</p>
-              <p>Hot and iced espresso drinks, from lattes to americanos.</p>
+              <p>Hot and iced espresso drinks made to order.</p>
               <ul>
-              <li>House made syrups, signature pastes, and cold foams</li>
-                <li>Customizable menu and stickers</li>
+                <li>House made syrups and cold foams</li>
+                <li>Custom menu and branding</li>
               </ul>
             </article>
 
@@ -353,11 +373,10 @@
               <span>Matcha bar</span>
               <h3>Matcha</h3>
               <p class="starting-price">Starts at $800</p>
-              <p>Freshly whisked ceremonial grade matcha lattes.</p>
+              <p>Freshly whisked ceremonial matcha, hot or iced.</p>
               <ul>
-              <li>House made syrups, signature purées, and cold foams</li>
-                <li>Ceremonial matcha</li>
-                <li>Customizable menu and stickers</li>
+                <li>House made flavors and cold foams</li>
+                <li>Custom menu and branding</li>
               </ul>
             </article>
 
@@ -365,10 +384,10 @@
               <span>Zero proof bar</span>
               <h3>Mocktail</h3>
               <p class="starting-price">Custom quote</p>
-              <p>Handcrafted drinks with seasonal flavors and premium garnishes.</p>
+              <p>Seasonal zero proof drinks with premium garnishes.</p>
               <ul>
-              <li>House made syrups and signature purées</li>
-                <li>Customizable menu and stickers</li>
+                <li>House made flavors</li>
+                <li>Custom menu and branding</li>
               </ul>
             </article>
 
@@ -376,11 +395,10 @@
               <span>Grab and go</span>
               <h3>Bottled lattes</h3>
               <p class="starting-price">Custom quote</p>
-              <p>Single serving espresso or ceremonial matcha drinks with cold foam.</p>
+              <p>Ready to serve espresso and matcha lattes.</p>
               <ul>
-                <li>House made syrups, signature purées, pastes, and cold foams</li>
-                <li>Prepped for quick service and busy weeks</li>
-                <li>Customizable stickers</li>
+                <li>Made for quick service</li>
+                <li>Custom labels</li>
               </ul>
             </article>
           </div>
@@ -392,14 +410,14 @@
         <div class="section-shell photo-story">
           <div class="photo-story-copy">
             <p class="eyebrow">Made in the moment</p>
-            <h2 id="home-service-title">Coffee made with care, right in front of your guests.</h2>
-            <p>Every drink is made to order and served by a team that cares about the details.</p>
+            <h2 id="home-service-title">Made fresh, right in front of your guests.</h2>
+            <p>Every drink is made to order.</p>
             <a class="button button-primary" href="#contact">Plan your coffee cart</a>
           </div>
           <div class="photo-story-media">
             <figure class="photo-card">
               <img src="assets/barista-wedding-service.jpg" width="1600" height="2400" loading="lazy" decoding="async" alt="Qadeer Coffee Co barista preparing a fresh drink at an elegant wedding reception">
-              <figcaption>Fresh drinks prepared for every guest</figcaption>
+              <figcaption class="image-caption">Fresh drinks prepared for every guest</figcaption>
             </figure>
           </div>
         </div>
@@ -410,11 +428,10 @@
           <div class="story-copy">
             <p class="eyebrow">Our story</p>
             <h2 id="story-title">Three siblings, one cart, and a lot of coffee.</h2>
-            <p>We are Sarmed, Raadiya, and Naaima. We started Qadeer Coffee Co because we love the way a great drink brings people together.</p>
-            <p>Today, we serve weddings, company events, and celebrations across New Jersey, New York City, Pennsylvania, and the DMV.</p>
+            <p>We are siblings Sarmed, Raadiya, and Naaima. We built Qadeer Coffee Co around good drinks and the way they bring people together.</p>
           </div>
           <figure class="story-photo">
-            <img src="assets/hero-cart.png" width="2500" height="3750" decoding="async" alt="The Qadeer Coffee Co founders seated in front of the mobile coffee cart">
+            <img src="assets/hero-cart.png" width="2500" height="3750" loading="lazy" decoding="async" alt="The Qadeer Coffee Co founders seated in front of the mobile coffee cart">
           </figure>
         </div>
       </section>
@@ -423,7 +440,7 @@
         <div class="section-shell">
           <div class="section-heading compact">
             <p class="eyebrow">Testimonials</p>
-            <h2 id="testimonials-title">Kind words from people we have served.</h2>
+            <h2 id="testimonials-title">What guests are saying.</h2>
           </div>
 
           <div class="testimonial-carousel" aria-label="Customer testimonials carousel">
@@ -549,7 +566,7 @@
             <p class="eyebrow">We would love to hear from you</p>
             <h2 id="contact-title">Tell us about your event.</h2>
             <p>
-              Send us your date, city, and guest count. We will check availability and help you choose the right menu.
+              Share your date, city, and guest count. We will send availability and the best fit.
             </p>
           </div>
           <div class="booking-panel booking-panel-simple tally-panel">
@@ -557,6 +574,7 @@
               data-tally-src="https://tally.so/embed/KYvGGA?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1"
               width="100%"
               height="720"
+              loading="lazy"
               frameborder="0"
               marginheight="0"
               marginwidth="0"
