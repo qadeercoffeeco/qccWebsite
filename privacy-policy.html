@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
     <title>Privacy Policy | Qadeer Coffee Co</title>
     <meta name="description" content="Privacy policy for Qadeer Coffee Co event inquiries, booking requests, website analytics, and advertising measurement.">
     <link rel="canonical" href="https://qadeercoffee.co/privacy-policy.html">
@@ -15,7 +16,7 @@
       gtag("config", "G-YESCRDH3H0");
     </script>
     <script src="analytics-events.js" defer></script>
-    <link rel="stylesheet" href="styles.css?v=service-polish-20260917">
+    <link rel="stylesheet" href="styles.css?v=mobile-seo-20260919">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -23,15 +24,26 @@
       <div class="header-inner">
         <a class="brand" href="index.html" aria-label="Qadeer Coffee Co home">
           <img src="assets/qadeer-logo-mark.svg" alt="Qadeer Coffee Co">
+          <span>Qadeer Coffee Co</span>
         </a>
-        <nav class="primary-nav" id="primary-nav">
-          <a href="coffee-catering-services.html">Services</a>
-          <a href="index.html#events">Events</a>
-          <a href="conference-coffee-catering-trade-shows.html">Conferences</a>
-          <a href="index.html#packages">Packages</a>
-          <a href="index.html#story">Our Story</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-toggle>
+          <span></span><span></span><span></span><span class="sr-only">Menu</span>
+        </button>
+        <nav class="primary-nav" id="primary-nav" data-nav>
+          <details class="nav-dropdown" data-nav-dropdown>
+            <summary>Events <span aria-hidden="true">⌄</span></summary>
+            <div class="nav-dropdown-panel">
+              <a href="wedding-coffee-catering-nj-nyc-pa.html">Weddings and showers</a>
+              <a href="corporate-coffee-catering-nyc-nj-pa.html">Company events</a>
+              <a href="corporate-coffee-catering-nyc-nj-pa.html#brand-activations">Brand activations</a>
+              <a href="conference-coffee-catering-trade-shows.html">Conferences and trade shows</a>
+              <a href="index.html#private-events">Private celebrations</a>
+            </div>
+          </details>
+          <a href="index.html#packages">What we serve</a>
+          <a href="index.html#story">Our story</a>
         </nav>
-        <a class="header-cta" href="index.html#contact">Tell us about your event</a>
+        <a class="header-cta" href="index.html#contact">Check your date</a>
       </div>
     </header>
     <main id="main">
@@ -69,5 +81,6 @@
         </div>
       </div>
     </footer>
+    <script src="script.js?v=dropdown-home-20260918"></script>
   </body>
 </html>

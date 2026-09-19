@@ -3,12 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <title>Corporate Coffee Catering in NJ, NYC &amp; PA | Qadeer Coffee Co</title>
     <meta name="description" content="Corporate coffee, matcha, and mocktail catering with branded cups, custom menus, and printed latte art across NJ, NYC, and PA.">
     <link rel="canonical" href="https://qadeercoffee.co/corporate-coffee-catering-nyc-nj-pa.html">
     <meta property="og:title" content="Corporate Coffee Catering in NJ, NYC &amp; PA | Qadeer Coffee Co">
     <meta property="og:description" content="Premium coffee, matcha, and mocktail carts for corporate events, conferences, and brand activations.">
     <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://qadeercoffee.co/corporate-coffee-catering-nyc-nj-pa.html">
     <meta property="og:image" content="https://qadeercoffee.co/assets/google-event-service.jpg">
     <meta name="twitter:card" content="summary_large_image">
@@ -21,7 +23,7 @@
       gtag("config", "G-YESCRDH3H0");
     </script>
     <script src="analytics-events.js" defer></script>
-    <link rel="stylesheet" href="styles.css?v=service-polish-20260917">
+    <link rel="stylesheet" href="styles.css?v=mobile-seo-20260919">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -84,13 +86,20 @@
           <span></span><span></span><span></span><span class="sr-only">Menu</span>
         </button>
         <nav class="primary-nav" id="primary-nav" data-nav>
-          <a href="coffee-catering-services.html">Services</a>
-          <a href="wedding-coffee-catering-nj-nyc-pa.html">Weddings</a>
-          <a href="corporate-coffee-catering-nyc-nj-pa.html">Corporate</a>
-          <a href="#brand-activations">Activations</a>
-          <a href="conference-coffee-catering-trade-shows.html">Conferences</a>
+          <details class="nav-dropdown" data-nav-dropdown>
+            <summary>Events <span aria-hidden="true">⌄</span></summary>
+            <div class="nav-dropdown-panel">
+              <a href="wedding-coffee-catering-nj-nyc-pa.html">Weddings and showers</a>
+              <a href="corporate-coffee-catering-nyc-nj-pa.html">Company events</a>
+              <a href="#brand-activations">Brand activations</a>
+              <a href="conference-coffee-catering-trade-shows.html">Conferences and trade shows</a>
+              <a href="index.html#private-events">Private celebrations</a>
+            </div>
+          </details>
+          <a href="index.html#packages">What we serve</a>
+          <a href="index.html#story">Our story</a>
         </nav>
-        <a class="header-cta" href="index.html#contact">Tell us about your event</a>
+        <a class="header-cta" href="index.html#contact">Check your date</a>
       </div>
     </header>
 
@@ -161,11 +170,11 @@
             <div class="photo-story-media photo-story-media-pair">
               <figure class="photo-card">
                 <img src="assets/google-event-service.jpg" width="1280" height="1920" loading="lazy" decoding="async" alt="Qadeer Coffee Co preparing drinks with Google branded cups at a corporate event">
-                <figcaption>Branded cups and service for a Google event</figcaption>
+                <figcaption class="image-caption">Branded cups and service for a Google event</figcaption>
               </figure>
               <figure class="photo-card">
                 <img src="assets/branded-latte-art.jpg" width="1280" height="1920" loading="lazy" decoding="async" alt="Cheetah design printed onto latte foam with a beverage art printer">
-                <figcaption>Custom artwork from our latte art printer</figcaption>
+                <figcaption class="image-caption">Custom artwork from our latte art printer</figcaption>
               </figure>
             </div>
           </div>
@@ -298,14 +307,6 @@
         </div>
       </div>
     </footer>
-    <script>
-      const toggle = document.querySelector("[data-menu-toggle]");
-      if (toggle) {
-        toggle.addEventListener("click", () => {
-          const isOpen = document.body.classList.toggle("menu-open");
-          toggle.setAttribute("aria-expanded", String(isOpen));
-        });
-      }
-    </script>
+    <script src="script.js?v=dropdown-home-20260918"></script>
   </body>
 </html>
