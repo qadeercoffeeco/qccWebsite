@@ -4,6 +4,39 @@ const trackAnalyticsEvent = (eventName, parameters = {}) => {
   }
 };
 
+const attributionKeys = [
+  "utm_source",
+  "utm_medium",
+  "utm_campaign",
+  "utm_term",
+  "utm_content",
+  "gclid",
+  "gbraid",
+  "wbraid"
+];
+
+const pageParameters = new URLSearchParams(window.location.search);
+
+const rememberAttribution = (key, value) => {
+  try {
+    if (value) window.sessionStorage.setItem(`qcc_${key}`, value);
+  } catch {
+    // Analytics should never interrupt the booking experience.
+  }
+};
+
+const readAttribution = (key) => {
+  try {
+    return window.sessionStorage.getItem(`qcc_${key}`);
+  } catch {
+    return null;
+  }
+};
+
+attributionKeys.forEach((key) => {
+  rememberAttribution(key, pageParameters.get(key));
+});
+
 function getCtaLocation(link) {
   if (link.classList.contains("header-cta")) return "header";
   if (link.classList.contains("floating-book")) return "floating";
@@ -12,10 +45,11 @@ function getCtaLocation(link) {
   return "site";
 }
 
-document.querySelectorAll('a[href="#contact"], a[href="/#contact"]').forEach((link) => {
+document.querySelectorAll('a[href$="#contact"], a[href$="#inquiry"], [data-lead-cta]').forEach((link) => {
   link.addEventListener("click", () => {
     trackAnalyticsEvent("check_availability_click", {
-      cta_location: getCtaLocation(link)
+      cta_location: getCtaLocation(link),
+      page_path: window.location.pathname
     });
   });
 });
@@ -42,6 +76,14 @@ if (bookingPanel && "IntersectionObserver" in window) {
   bookingPanelObserver.observe(bookingPanel);
 }
 
-if (new URLSearchParams(window.location.search).get("lead") === "1") {
-  trackAnalyticsEvent("generate_lead", { lead_source: "booking_form" });
+const isThankYouPage = /\/thank-you\.html$/.test(window.location.pathname);
+const leadWasTracked = readAttribution("generate_lead_tracked") === "1";
+
+if ((isThankYouPage || pageParameters.get("lead") === "1") && !leadWasTracked) {
+  trackAnalyticsEvent("generate_lead", {
+    lead_source: readAttribution("utm_source") || "booking_form",
+    lead_medium: readAttribution("utm_medium") || "website",
+    lead_campaign: readAttribution("utm_campaign") || "unattributed"
+  });
+  rememberAttribution("generate_lead_tracked", "1");
 }

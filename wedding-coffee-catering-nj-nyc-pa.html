@@ -22,8 +22,8 @@
       gtag("js", new Date());
       gtag("config", "G-YESCRDH3H0");
     </script>
-    <script src="analytics-events.js" defer></script>
-    <link rel="stylesheet" href="styles.css?v=mobile-seo-20260919">
+    <script src="analytics-events.js?v=lead-measurement-20260922" defer></script>
+    <link rel="stylesheet" href="styles.css?v=lead-flow-20260922">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -99,7 +99,7 @@
           <a href="index.html#packages">What we serve</a>
           <a href="index.html#story">Our story</a>
         </nav>
-        <a class="header-cta" href="index.html#contact">Check your date</a>
+        <a class="header-cta" href="#inquiry" data-lead-cta>Check your date</a>
       </div>
     </header>
 
@@ -112,7 +112,7 @@
               <h1>Coffee, matcha, and mocktails your guests will remember.</h1>
               <p class="lede">We serve wedding mornings, showers, receptions, and late night celebrations across NJ, NYC, and PA.</p>
               <div class="hero-actions">
-                <a class="button button-primary" href="index.html#contact">Ask about your date</a>
+                <a class="button button-primary" href="#inquiry" data-lead-cta>Ask about your date</a>
                 <a class="button button-secondary" href="coffee-catering-services.html">See all services</a>
               </div>
             </div>
@@ -283,19 +283,35 @@
         </section>
       </article>
 
-      <section class="band band-peach">
-        <div class="section-shell booking-panel">
-          <div>
-            <p class="eyebrow">Book wedding coffee catering</p>
-            <h2>Make the coffee cart part of the celebration.</h2>
-            <p>Share your venue, date, guest count, and the moments where you want coffee, matcha, or mocktails served.</p>
+      <section class="contact-section" id="inquiry" data-contact-section aria-labelledby="wedding-inquiry-title">
+        <div class="section-shell contact-layout">
+          <div class="contact-heading">
+            <p class="eyebrow">Your date, your drinks</p>
+            <h2 id="wedding-inquiry-title">Tell us about your wedding.</h2>
+            <p>Share your date, venue, guest count, and favorite drinks. We will check availability and help you choose the right setup.</p>
+            <ul class="inquiry-reassurance" aria-label="What happens next">
+              <li>A package that fits your guest count</li>
+              <li>Menu ideas your guests will enjoy</li>
+              <li>Help with venue and setup details</li>
+            </ul>
           </div>
-          <a class="button button-primary" href="index.html#contact">Tell us about your wedding</a>
+          <div class="booking-panel booking-panel-simple tally-panel">
+            <iframe
+              data-tally-src="https://tally.so/embed/KYvGGA?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1&amp;originPage=wedding"
+              width="100%"
+              height="720"
+              loading="lazy"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              title="Wedding coffee catering inquiry form">
+            </iframe>
+          </div>
         </div>
       </section>
     </main>
 
-    <a class="floating-book" href="index.html#contact">Tell us about your event</a>
+    <a class="floating-book" href="#inquiry" data-lead-cta>Check your date</a>
     <footer class="site-footer">
       <div class="section-shell footer-inner">
         <a class="footer-brand" href="index.html" aria-label="Qadeer Coffee Co home">
@@ -310,6 +326,7 @@
         </div>
       </div>
     </footer>
-    <script src="script.js?v=dropdown-home-20260918"></script>
+    <script src="script.js?v=lead-flow-20260922"></script>
+    <script src="https://tally.so/widgets/embed.js" async></script>
   </body>
 </html>
