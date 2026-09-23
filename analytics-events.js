@@ -85,5 +85,8 @@ if ((isThankYouPage || pageParameters.get("lead") === "1") && !leadWasTracked) {
     lead_medium: readAttribution("utm_medium") || "website",
     lead_campaign: readAttribution("utm_campaign") || "unattributed"
   });
+  trackAnalyticsEvent("conversion", {
+    send_to: "AW-18470423573/Dq9HCJme4IIdEJWYsedE"
+  });
   rememberAttribution("generate_lead_tracked", "1");
 }
