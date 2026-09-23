@@ -21,9 +21,10 @@
       function gtag(){dataLayer.push(arguments);}
       gtag("js", new Date());
       gtag("config", "G-YESCRDH3H0");
+      gtag("config", "AW-18470423573");
     </script>
-    <script src="analytics-events.js" defer></script>
-    <link rel="stylesheet" href="styles.css?v=mobile-seo-20260919">
+    <script src="analytics-events.js?v=lead-measurement-20260922" defer></script>
+    <link rel="stylesheet" href="styles.css?v=lead-flow-20260922">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -99,7 +100,7 @@
           <a href="index.html#packages">What we serve</a>
           <a href="index.html#story">Our story</a>
         </nav>
-        <a class="header-cta" href="index.html#contact">Check your date</a>
+        <a class="header-cta" href="#inquiry" data-lead-cta>Check your date</a>
       </div>
     </header>
 
@@ -112,7 +113,7 @@
               <h1>Coffee cart catering your team will look forward to.</h1>
               <p class="lede">We bring fresh espresso, matcha, and mocktails to office events, conferences, client gatherings, and brand activations across NJ, NYC, and PA.</p>
               <div class="hero-actions">
-                <a class="button button-primary" href="index.html#contact">Tell us what you are planning</a>
+                <a class="button button-primary" href="#inquiry" data-lead-cta>Tell us what you are planning</a>
                 <a class="button button-secondary" href="#brand-activations">See how we can help</a>
               </div>
             </div>
@@ -280,19 +281,35 @@
         </section>
       </article>
 
-      <section class="band band-peach">
-        <div class="section-shell booking-panel">
-          <div>
-            <p class="eyebrow">Book corporate coffee catering</p>
-            <h2>Tell us what you are planning.</h2>
-            <p>Share your date, city, guest count, and service time. We will check availability and help you choose the right cart and menu.</p>
+      <section class="contact-section" id="inquiry" data-contact-section aria-labelledby="corporate-inquiry-title">
+        <div class="section-shell contact-layout">
+          <div class="contact-heading">
+            <p class="eyebrow">Let us make this easy</p>
+            <h2 id="corporate-inquiry-title">Tell us what you are planning.</h2>
+            <p>Share your date, city, guest count, and timing. We will check availability and recommend the right setup.</p>
+            <ul class="inquiry-reassurance" aria-label="What happens next">
+              <li>A clear recommendation for your event</li>
+              <li>Pricing based on guest count and service</li>
+              <li>Help with venue and branding details</li>
+            </ul>
           </div>
-          <a class="button button-primary" href="index.html#contact">Tell us about your event</a>
+          <div class="booking-panel booking-panel-simple tally-panel">
+            <iframe
+              data-tally-src="https://tally.so/embed/KYvGGA?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1&amp;originPage=corporate"
+              width="100%"
+              height="720"
+              loading="lazy"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              title="Corporate coffee catering inquiry form">
+            </iframe>
+          </div>
         </div>
       </section>
     </main>
 
-    <a class="floating-book" href="index.html#contact">Tell us about your event</a>
+    <a class="floating-book" href="#inquiry" data-lead-cta>Check your date</a>
     <footer class="site-footer">
       <div class="section-shell footer-inner">
         <a class="footer-brand" href="index.html" aria-label="Qadeer Coffee Co home">
@@ -307,6 +324,7 @@
         </div>
       </div>
     </footer>
-    <script src="script.js?v=dropdown-home-20260918"></script>
+    <script src="script.js?v=lead-flow-20260922"></script>
+    <script src="https://tally.so/widgets/embed.js" async></script>
   </body>
 </html>

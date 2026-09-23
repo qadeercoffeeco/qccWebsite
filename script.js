@@ -1,6 +1,6 @@
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const nav = document.querySelector("[data-nav]");
-const contactSection = document.querySelector("#contact");
+const contactSection = document.querySelector("#contact, [data-contact-section]");
 const mobileFloatingQuery = window.matchMedia("(max-width: 820px)");
 const testimonialTrack = document.querySelector("[data-testimonial-track]");
 const navDropdowns = [...document.querySelectorAll("[data-nav-dropdown]")];

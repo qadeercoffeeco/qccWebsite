@@ -1222,6 +1222,29 @@ textarea {
   font-size: 1.05rem;
 }
 
+.inquiry-reassurance {
+  display: grid;
+  gap: 12px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--green);
+  font-weight: 760;
+}
+
+.inquiry-reassurance li {
+  position: relative;
+  padding-left: 28px;
+}
+
+.inquiry-reassurance li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--green-3);
+  font-weight: 900;
+}
+
 .contact-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.55fr) minmax(360px, 1fr);
