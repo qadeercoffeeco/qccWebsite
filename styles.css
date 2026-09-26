@@ -417,7 +417,15 @@ textarea {
 .packages-section,
 .story-section,
 .contact-section {
-  padding: clamp(72px, 8vw, 118px) 0;
+  padding: clamp(54px, 6vw, 88px) 0;
+}
+
+.trusted-near-hero {
+  padding: 28px 0 30px;
+}
+
+.trusted-near-hero .logo-marquee {
+  margin-top: 18px;
 }
 
 .corporate-section,
@@ -803,8 +811,10 @@ textarea {
 .event-card-photo {
   display: block;
   width: 100%;
-  height: auto;
+  height: 340px;
+  padding: 10px;
   margin: 0;
+  object-fit: contain;
   background: var(--cream);
 }
 
@@ -815,6 +825,7 @@ textarea {
 }
 
 .event-card-wide .event-card-photo {
+  height: 440px;
   align-self: center;
 }
 
@@ -1054,81 +1065,102 @@ textarea {
   color: var(--green-2);
 }
 
-.testimonials-section {
-  padding: 68px 0;
+.google-reviews-section {
+  padding: clamp(54px, 6vw, 86px) 0;
   background: var(--paper);
   border-block: 1px solid var(--line);
 }
 
-.testimonials-section .section-heading {
-  margin-bottom: 24px;
-}
-
-.testimonial-carousel {
-  overflow: hidden;
-  padding-bottom: 4px;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%);
-  mask-image: linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%);
-}
-
-.testimonial-grid {
+.reviews-heading {
   display: flex;
-  align-items: stretch;
-  gap: 14px;
-  width: max-content;
-  transform: translateX(0);
-  animation: none;
-  will-change: transform;
-}
-
-.testimonial-grid.is-ready {
-  animation: testimonial-scroll 62s linear infinite;
-}
-
-.testimonial-carousel:hover .testimonial-grid,
-.testimonial-carousel:focus-within .testimonial-grid {
-  animation-play-state: paused;
-}
-
-.testimonial-card {
-  flex: 0 0 clamp(280px, 23vw, 360px);
-  min-height: 250px;
-  padding: 22px;
-  display: flex;
-  flex-direction: column;
+  align-items: flex-end;
   justify-content: space-between;
-  background: var(--cream);
+  gap: 28px;
+  margin-bottom: 28px;
 }
 
-.testimonial-card p {
+.reviews-heading h2 {
+  max-width: 760px;
   margin: 0;
   color: var(--green);
-  font-size: 0.98rem;
+  font-size: clamp(2.15rem, 4vw, 4.1rem);
+  line-height: 0.98;
 }
 
-.testimonial-card footer {
-  margin-top: 24px;
+.google-rating {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 3px 12px;
+  min-width: 210px;
+  padding: 15px 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--cream);
+  color: var(--green);
 }
 
-.testimonial-card strong,
-.testimonial-card span {
+.google-rating img {
+  grid-column: 1 / -1;
+  width: 82px;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.google-rating strong {
+  font-size: 1.45rem;
+}
+
+.google-rating > span,
+.review-stars {
+  color: #d99a24;
+  letter-spacing: 0.08em;
+}
+
+.google-rating small {
+  grid-column: 1 / -1;
+  color: var(--green-2);
+}
+
+.google-review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.google-review-card {
+  min-height: 210px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+}
+
+.google-review-card blockquote {
+  margin: 24px 0;
+  color: var(--green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  line-height: 1.2;
+}
+
+.google-review-card p {
+  margin: auto 0 0;
+  font-weight: 820;
+}
+
+.google-review-card p span {
   display: block;
-}
-
-.testimonial-card span {
   margin-top: 3px;
   color: var(--green-2);
-  font-size: 0.86rem;
+  font-size: 0.82rem;
+  font-weight: 560;
 }
 
-@keyframes testimonial-scroll {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(calc(-50% - 7px));
-  }
+.reviews-link {
+  margin-top: 22px;
 }
 
 .booking-steps-section {
@@ -1282,21 +1314,36 @@ textarea {
   display: block;
 }
 
-.tally-panel {
-  min-height: 720px;
-  padding: clamp(14px, 2vw, 22px);
+.flashquotes-panel {
+  display: block;
+  min-height: 570px;
+  padding: 10px;
   overflow: hidden;
+  border-radius: 16px;
   background:
-    linear-gradient(180deg, rgba(252, 251, 244, 0.92), rgba(252, 251, 244, 0.98)),
+    linear-gradient(145deg, rgba(214, 230, 238, 0.38), rgba(252, 251, 244, 0.96) 50%),
     var(--paper);
 }
 
-.tally-panel iframe {
+.flashquotes-panel iframe {
   display: block;
   width: 100%;
-  min-height: 700px;
   border: 0;
-  background: transparent;
+}
+
+.flashquotes-fallback {
+  padding: 12px 16px 14px;
+  text-align: center;
+  color: var(--green-2);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.flashquotes-fallback a {
+  color: var(--green);
+  font-weight: 780;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .booking-panel h3 {
@@ -1689,11 +1736,6 @@ body.show-floating .floating-book {
     grid-template-columns: 1fr;
   }
 
-  .tally-panel,
-  .tally-panel iframe {
-    min-height: 780px;
-  }
-
   .footer-inner {
     width: min(100% - 24px, 720px);
     grid-template-columns: 1fr;
@@ -1803,18 +1845,6 @@ body.show-floating .floating-book {
 
   .event-card-copy h3 {
     font-size: 1.55rem;
-  }
-
-  .testimonial-carousel {
-    margin-inline: -14px;
-  }
-
-  .testimonial-grid.is-ready {
-    animation-duration: 88s;
-  }
-
-  .testimonial-card {
-    flex-basis: min(78vw, 330px);
   }
 
   .service-card {
@@ -1944,7 +1974,7 @@ body.show-floating .floating-book {
 }
 
 .band {
-  padding: clamp(64px, 8vw, 112px) 0;
+  padding: clamp(48px, 6vw, 82px) 0;
 }
 
 .band-blue,
@@ -2030,14 +2060,20 @@ body.show-floating .floating-book {
   margin-top: 34px;
 }
 
+.photo-gallery .photo-card img {
+  width: 100%;
+  height: min(52vw, 520px);
+  object-fit: contain;
+}
+
 .brand-proof-section {
-  padding: clamp(64px, 8vw, 108px) 0;
+  padding: clamp(52px, 6vw, 82px) 0;
   background: var(--blue-2);
   border-block: 1px solid var(--line);
 }
 
 .home-service-section {
-  padding: clamp(64px, 8vw, 108px) 0;
+  padding: clamp(52px, 6vw, 82px) 0;
   background: var(--paper);
   border-block: 1px solid var(--line);
 }
@@ -2305,6 +2341,14 @@ body.show-floating .floating-book {
   .press-strip .text-link {
     grid-column: 2;
   }
+
+  .reviews-heading {
+    align-items: flex-start;
+  }
+
+  .google-review-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 600px) {
@@ -2333,5 +2377,36 @@ body.show-floating .floating-book {
 
   .press-strip .text-link {
     grid-column: 1;
+  }
+
+  .reviews-heading {
+    display: grid;
+  }
+
+  .google-rating {
+    width: 100%;
+  }
+
+  .google-review-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 8px;
+  }
+
+  .google-review-card {
+    flex: 0 0 86%;
+    min-height: 200px;
+    scroll-snap-align: start;
+  }
+
+  .event-card-photo,
+  .event-card-wide .event-card-photo {
+    height: 320px;
+  }
+
+  .photo-gallery .photo-card img {
+    height: auto;
+    max-height: 520px;
   }
 }

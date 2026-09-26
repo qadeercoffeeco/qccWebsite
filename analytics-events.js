@@ -54,6 +54,25 @@ document.querySelectorAll('a[href$="#contact"], a[href$="#inquiry"], [data-lead-
   });
 });
 
+document.querySelectorAll('a[href*="app.flashquotes.com/f/qhn9mn"]').forEach((link) => {
+  link.addEventListener("click", () => {
+    trackAnalyticsEvent("begin_quote", {
+      cta_location: getCtaLocation(link),
+      page_path: window.location.pathname,
+      quote_provider: "flashquotes"
+    });
+  });
+});
+
+document.querySelectorAll("[data-phone-cta]").forEach((link) => {
+  link.addEventListener("click", () => {
+    trackAnalyticsEvent("phone_lead_click", {
+      cta_location: getCtaLocation(link),
+      page_path: window.location.pathname
+    });
+  });
+});
+
 document.querySelectorAll(".event-card-link").forEach((link) => {
   link.addEventListener("click", () => {
     const eventType = link.querySelector("h3")?.textContent?.trim() || "unknown";
@@ -61,12 +80,12 @@ document.querySelectorAll(".event-card-link").forEach((link) => {
   });
 });
 
-const bookingPanel = document.querySelector(".tally-panel");
+const bookingPanel = document.querySelector("[data-flashquotes-embed]");
 if (bookingPanel && "IntersectionObserver" in window) {
   const bookingPanelObserver = new IntersectionObserver(
     (entries, observer) => {
       if (entries.some((entry) => entry.isIntersecting)) {
-        trackAnalyticsEvent("booking_form_view");
+        trackAnalyticsEvent("flashquotes_embed_view", { quote_provider: "flashquotes" });
         observer.disconnect();
       }
     },
