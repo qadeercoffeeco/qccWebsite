@@ -675,13 +675,25 @@ textarea {
   margin-bottom: 38px;
 }
 
-.events-heading {
-  margin-bottom: 34px;
+.events-section {
+  padding-block: 64px;
 }
 
-.events-heading p:not(.eyebrow) {
-  max-width: 1000px;
-  margin-top: 18px;
+.events-section .section-shell {
+  max-width: 960px;
+}
+
+.events-heading {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.events-heading h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 650;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
 }
 
 .section-heading.compact {
@@ -706,13 +718,9 @@ textarea {
 
 .events-grid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 16px;
-  align-items: start;
-}
-
-.event-card-photo-placeholder {
-  visibility: hidden;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 4vw, 56px);
+  align-items: stretch;
 }
 
 .package-card,
@@ -780,91 +788,76 @@ textarea {
 }
 
 .event-card {
-  grid-column: span 2;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: var(--paper);
-  box-shadow: 0 16px 42px rgba(20, 62, 20, 0.07);
-}
-
-.event-card-wide {
-  grid-column: span 4;
+  min-width: 0;
 }
 
 .event-card-link {
-  display: block;
+  display: grid;
+  gap: 16px;
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
   color: inherit;
 }
 
-.event-card-link:focus-visible {
+.event-card-link:focus-visible,
+.events-more a:focus-visible {
   outline: 3px solid var(--honey);
   outline-offset: 6px;
   border-radius: 6px;
 }
 
 .event-card:hover .event-card-link h3,
-.event-card:focus-within .event-card-link h3 {
+.event-card:focus-within .event-card-link h3,
+.events-more a:hover {
   color: var(--green-3);
 }
 
 .event-card-photo {
   display: block;
-  width: 100%;
-  height: 340px;
-  padding: 10px;
+  width: auto;
+  height: clamp(260px, 28vw, 340px);
   margin: 0;
   object-fit: contain;
-  background: var(--cream);
-}
-
-.event-card-wide .event-card-link {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(250px, 0.8fr);
-  align-items: stretch;
-}
-
-.event-card-wide .event-card-photo {
-  height: 440px;
-  align-self: center;
 }
 
 .event-card-copy {
-  padding: 24px;
-}
-
-.event-card-copy span {
-  display: block;
-  margin: 0 0 14px;
-  color: var(--green-3);
-  font-size: 0.74rem;
-  font-weight: 880;
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
 }
 
 .event-card-copy h3 {
-  min-height: 0;
-  margin: 0 0 12px;
-  font-size: clamp(1.35rem, 2vw, 2rem);
-  line-height: 1.05;
-}
-
-.event-card-copy p {
   margin: 0;
-  color: var(--green-2);
-  line-height: 1.45;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
 }
 
-.event-card-copy b {
+.event-link-arrow {
+  flex: 0 0 auto;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.events-more {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 28px;
+  margin-top: 28px;
+}
+
+.events-more a {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  margin-top: 20px;
-  font-size: 0.92rem;
-}
-
-.event-card-copy b::after {
-  content: "→";
+  gap: 10px;
+  min-height: 44px;
+  color: var(--green-2);
+  font-size: 0.88rem;
 }
 
 .package-card::before {
@@ -1660,19 +1653,6 @@ body.show-floating .floating-book {
     bottom: 20px;
   }
 
-  .events-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .event-card,
-  .event-card-wide {
-    grid-column: span 1;
-  }
-
-  .event-card-wide .event-card-link {
-    display: block;
-  }
-
   .corporate-copy {
     max-width: 100%;
   }
@@ -1837,14 +1817,39 @@ body.show-floating .floating-book {
 
   .events-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
-  .event-card-copy {
-    padding: 22px;
+  .events-section {
+    padding-block: 42px;
+  }
+
+  .events-heading {
+    margin-bottom: 22px;
+    text-align: left;
+  }
+
+  .event-card-link {
+    grid-template-columns: 96px minmax(0, 1fr);
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    max-width: none;
+  }
+
+  .event-card-photo {
+    width: 96px;
+    height: 132px;
   }
 
   .event-card-copy h3 {
-    font-size: 1.55rem;
+    font-size: 1.1rem;
+  }
+
+  .events-more {
+    justify-content: flex-start;
+    column-gap: 24px;
+    margin-top: 20px;
   }
 
   .service-card {
@@ -2398,11 +2403,6 @@ body.show-floating .floating-book {
     flex: 0 0 86%;
     min-height: 200px;
     scroll-snap-align: start;
-  }
-
-  .event-card-photo,
-  .event-card-wide .event-card-photo {
-    height: 320px;
   }
 
   .photo-gallery .photo-card img {
