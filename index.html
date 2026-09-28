@@ -26,11 +26,13 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-YESCRDH3H0");
-      gtag("config", "AW-18470423573");
+      if (["qadeercoffee.co", "www.qadeercoffee.co"].includes(window.location.hostname)) {
+        gtag("js", new Date());
+        gtag("config", "G-YESCRDH3H0");
+        gtag("config", "AW-18470423573");
+      }
     </script>
-    <script src="analytics-events.js?v=quote-flow-20260924" defer></script>
+    <script src="analytics-events.js?v=lead-funnel-20260928" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -140,7 +142,7 @@
         "inLanguage": "en-US"
       }
     </script>
-    <link rel="stylesheet" href="styles.css?v=lead-flow-20260922">
+    <link rel="stylesheet" href="styles.css?v=lead-funnel-20260928">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -479,8 +481,8 @@
             <h2 id="contact-title">See pricing for your event.</h2>
             <p>Choose your event type, date, and guest count. Flashquotes will guide you to the right starting package.</p>
           </div>
-          <div class="booking-panel flashquotes-panel" data-flashquotes-embed>
-            <script form-id="cmu6d1dsc000eid04pc006hyj" src="https://app.flashquotes.com/embed.js"></script>
+          <div class="booking-panel flashquotes-panel" data-flashquotes-embed data-quote-type="general">
+            <iframe class="flashquotes-frame" src="https://app.flashquotes.com/forms/public/quote/cmu6d1dsc000eid04pc006hyj" title="Event quote form" loading="eager"></iframe>
             <noscript><a class="button button-primary" href="https://app.flashquotes.com/f/qhn9mn" data-lead-cta>Open the quote form</a></noscript>
             <p class="flashquotes-fallback">Prefer a full screen form? <a href="https://app.flashquotes.com/f/qhn9mn" data-lead-cta>Open Flashquotes</a>. Questions first? Call <a href="tel:+12152728884" data-phone-cta>(215) 272-8884</a>.</p>
           </div>

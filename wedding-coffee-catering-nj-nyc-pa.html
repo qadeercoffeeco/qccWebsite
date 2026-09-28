@@ -19,12 +19,14 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-YESCRDH3H0");
-      gtag("config", "AW-18470423573");
+      if (["qadeercoffee.co", "www.qadeercoffee.co"].includes(window.location.hostname)) {
+        gtag("js", new Date());
+        gtag("config", "G-YESCRDH3H0");
+        gtag("config", "AW-18470423573");
+      }
     </script>
-    <script src="analytics-events.js?v=quote-flow-20260924" defer></script>
-    <link rel="stylesheet" href="styles.css?v=lead-flow-20260922">
+    <script src="analytics-events.js?v=lead-funnel-20260928" defer></script>
+    <link rel="stylesheet" href="styles.css?v=lead-funnel-20260928">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -75,7 +77,7 @@
       }
     </script>
   </head>
-  <body>
+  <body data-lead-type="wedding">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="header-inner">
@@ -116,6 +118,7 @@
                 <a class="button button-primary" href="#inquiry" data-lead-cta>Get wedding pricing</a>
                 <a class="button button-secondary" href="coffee-catering-services.html">See all services</a>
               </div>
+              <p class="hero-offer-note">Packages from $1,000. Share your plans for a personalized quote.</p>
             </div>
             <aside class="hero-proof" aria-label="Wedding catering highlights">
               <div class="proof-card">
@@ -134,12 +137,39 @@
           </div>
         </section>
 
+        <section class="paid-proof-band" aria-label="Wedding service proof">
+          <div class="section-shell paid-proof-stats">
+            <p><strong>150+</strong><span>wedding events served</span></p>
+            <p><strong>5.0</strong><span>Google rating</span></p>
+            <p><strong>Fresh</strong><span>espresso, matcha, and mocktails</span></p>
+          </div>
+        </section>
+
+        <section class="contact-section contact-section-priority" id="inquiry" data-contact-section aria-labelledby="wedding-inquiry-title">
+          <div class="section-shell contact-layout">
+            <div class="contact-heading">
+              <p class="eyebrow">Quick wedding quote</p>
+              <h2 id="wedding-inquiry-title">Tell us the date, venue, and guest count.</h2>
+              <p>We will check availability and recommend a package that fits your celebration.</p>
+              <ul class="inquiry-reassurance" aria-label="What happens next">
+                <li>Pricing matched to your guest count</li>
+                <li>Personal menu ideas</li>
+                <li>A real reply from our team</li>
+              </ul>
+            </div>
+            <div class="booking-panel flashquotes-panel" data-flashquotes-embed data-quote-type="wedding">
+              <iframe class="flashquotes-frame" src="https://app.flashquotes.com/forms/public/quote/cmu6d1dsc000eid04pc006hyj" title="Wedding event quote form" loading="eager"></iframe>
+              <noscript><a class="button button-primary" href="https://app.flashquotes.com/f/qhn9mn" data-lead-cta>Open the quote form</a></noscript>
+              <p class="flashquotes-fallback">Want the form in a new window? <a href="https://app.flashquotes.com/f/qhn9mn" data-lead-cta>Open it here</a>. Questions first? Call <a href="tel:+12152728884" data-phone-cta>(215) 272-8884</a>.</p>
+            </div>
+          </div>
+        </section>
+
         <section class="band band-cream">
           <div class="section-shell two-column">
             <div class="content-stack">
               <p>The best wedding details feel personal. Your menu can include a favorite latte, a matcha inspired by your colors, or a mocktail named after someone you love.</p>
-              <p>We can serve the wedding party in the morning, welcome guests before the ceremony, or bring espresso to the dance floor later in the night. We will plan the timing with you so the cart feels like part of the day.</p>
-              <p>Every drink is made with fresh espresso, whisked matcha, house made syrups, fruit purees, and cold foams prepared with care.</p>
+              <p>We can serve the wedding morning, welcome guests, or bring espresso to the dance floor. We plan the timing so the cart feels like part of the day.</p>
             </div>
             <aside class="quick-links" aria-labelledby="wedding-links-title">
               <h2 id="wedding-links-title">Wedding coffee services</h2>
@@ -284,25 +314,6 @@
         </section>
       </article>
 
-      <section class="contact-section" id="inquiry" data-contact-section aria-labelledby="wedding-inquiry-title">
-        <div class="section-shell contact-layout">
-          <div class="contact-heading">
-            <p class="eyebrow">Your date, your drinks</p>
-            <h2 id="wedding-inquiry-title">Tell us about your wedding.</h2>
-            <p>Share your date, venue, guest count, and favorite drinks. We will check availability and help you choose the right setup.</p>
-            <ul class="inquiry-reassurance" aria-label="What happens next">
-              <li>A package that fits your guest count</li>
-              <li>Menu ideas your guests will enjoy</li>
-              <li>Help with venue and setup details</li>
-            </ul>
-          </div>
-          <div class="booking-panel flashquotes-panel" data-flashquotes-embed>
-            <script form-id="cmu6d1dsc000eid04pc006hyj" src="https://app.flashquotes.com/embed.js"></script>
-            <noscript><a class="button button-primary" href="https://app.flashquotes.com/f/qhn9mn" data-lead-cta>Open the quote form</a></noscript>
-            <p class="flashquotes-fallback">Prefer a full screen form? <a href="https://app.flashquotes.com/f/qhn9mn" data-lead-cta>Open Flashquotes</a>. Questions first? Call <a href="tel:+12152728884" data-phone-cta>(215) 272-8884</a>.</p>
-          </div>
-        </div>
-      </section>
     </main>
 
     <a class="floating-book" href="#inquiry" data-lead-cta>Get a quote</a>

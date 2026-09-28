@@ -2410,3 +2410,128 @@ body.show-floating .floating-book {
     max-height: 520px;
   }
 }
+
+/* Paid-search landing page conversion path */
+.hero-offer-note {
+  margin: 18px 0 0;
+  color: var(--green);
+  font-size: 0.96rem;
+  font-weight: 800;
+}
+
+.paid-proof-band {
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.paid-proof-inner,
+.paid-proof-stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(24px, 5vw, 64px);
+  padding-block: 22px;
+}
+
+.paid-proof-inner > p {
+  flex: 0 0 auto;
+  margin: 0;
+  color: var(--green-2);
+  font-weight: 800;
+}
+
+.paid-proof-logos {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-around;
+  gap: clamp(24px, 4vw, 58px);
+}
+
+.paid-proof-logos img {
+  width: auto;
+  max-width: 150px;
+  max-height: 38px;
+  object-fit: contain;
+}
+
+.paid-proof-logos img[src*="anthropologie"] {
+  max-width: 176px;
+  max-height: 20px;
+}
+
+.paid-proof-stats p {
+  display: grid;
+  gap: 3px;
+  margin: 0;
+  color: var(--green-2);
+}
+
+.paid-proof-stats strong {
+  color: var(--green);
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.paid-proof-stats span {
+  font-weight: 700;
+}
+
+.contact-section-priority {
+  scroll-margin-top: 88px;
+  padding: clamp(44px, 6vw, 76px) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-section-priority .flashquotes-panel {
+  min-height: 520px;
+}
+
+.flashquotes-frame {
+  display: block;
+  width: 100%;
+  min-height: 650px;
+  border: 0;
+  background: transparent;
+}
+
+@media (max-width: 820px) {
+  .paid-proof-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .paid-proof-logos {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .paid-proof-stats {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .paid-proof-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .paid-proof-stats p {
+    grid-template-columns: 76px minmax(0, 1fr);
+    align-items: baseline;
+  }
+
+  .paid-proof-logos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 28px;
+  }
+
+  .paid-proof-logos img,
+  .paid-proof-logos img[src*="anthropologie"] {
+    max-width: 130px;
+  }
+}

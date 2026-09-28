@@ -19,12 +19,14 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-YESCRDH3H0");
-      gtag("config", "AW-18470423573");
+      if (["qadeercoffee.co", "www.qadeercoffee.co"].includes(window.location.hostname)) {
+        gtag("js", new Date());
+        gtag("config", "G-YESCRDH3H0");
+        gtag("config", "AW-18470423573");
+      }
     </script>
-    <script src="analytics-events.js?v=quote-flow-20260924" defer></script>
-    <link rel="stylesheet" href="styles.css?v=lead-flow-20260922">
+    <script src="analytics-events.js?v=lead-funnel-20260928" defer></script>
+    <link rel="stylesheet" href="styles.css?v=lead-funnel-20260928">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -75,7 +77,7 @@
       }
     </script>
   </head>
-  <body>
+  <body data-lead-type="corporate">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="header-inner">
@@ -116,6 +118,7 @@
                 <a class="button button-primary" href="#inquiry" data-lead-cta>Get corporate pricing</a>
                 <a class="button button-secondary" href="#brand-activations">See how we can help</a>
               </div>
+              <p class="hero-offer-note">Packages from $900. Share your plans for a personalized quote.</p>
             </div>
             <aside class="hero-proof" aria-label="Corporate catering highlights">
               <div class="proof-card">
@@ -134,12 +137,43 @@
           </div>
         </section>
 
+        <section class="paid-proof-band" aria-label="Trusted corporate clients">
+          <div class="section-shell paid-proof-inner">
+            <p>Trusted by teams at</p>
+            <div class="paid-proof-logos">
+              <img class="logo-google" src="assets/logo-google.svg" width="160" height="53" alt="Google">
+              <img src="assets/logo-braze-320.png" width="160" height="75" alt="Braze">
+              <img src="assets/logo-anthropologie-320.png" width="190" height="12" alt="Anthropologie">
+              <img src="assets/logo-tcnj-320.png" width="160" height="57" alt="The College of New Jersey">
+            </div>
+          </div>
+        </section>
+
+        <section class="contact-section contact-section-priority" id="inquiry" data-contact-section aria-labelledby="corporate-inquiry-title">
+          <div class="section-shell contact-layout">
+            <div class="contact-heading">
+              <p class="eyebrow">Quick corporate quote</p>
+              <h2 id="corporate-inquiry-title">Tell us the date, city, and guest count.</h2>
+              <p>We will recommend the right cart and confirm availability.</p>
+              <ul class="inquiry-reassurance" aria-label="What happens next">
+                <li>Pricing matched to your guest count</li>
+                <li>Branding and venue guidance included</li>
+                <li>A real reply from our team</li>
+              </ul>
+            </div>
+            <div class="booking-panel flashquotes-panel" data-flashquotes-embed data-quote-type="corporate">
+              <iframe class="flashquotes-frame" src="https://app.flashquotes.com/forms/public/quote/cmu6d1dsc000eid04pc006hyj" title="Corporate event quote form" loading="eager"></iframe>
+              <noscript><a class="button button-primary" href="https://app.flashquotes.com/f/qhn9mn" data-lead-cta>Open the quote form</a></noscript>
+              <p class="flashquotes-fallback">Want the form in a new window? <a href="https://app.flashquotes.com/f/qhn9mn" data-lead-cta>Open it here</a>. Questions first? Call <a href="tel:+12152728884" data-phone-cta>(215) 272-8884</a>.</p>
+            </div>
+          </div>
+        </section>
+
         <section class="band band-cream">
           <div class="section-shell two-column">
             <div class="content-stack">
-              <p>We have served more than 50 company events, from office celebrations to conferences and brand launches. Our job is simple: make planning easy and give your guests something they will genuinely enjoy.</p>
-              <p>Choose espresso, freshly whisked matcha, mocktails, or a mix of all three. With three carts, we can plan around your guest count, service window, and venue needs while keeping every drink consistent.</p>
-              <p>For brand and retail events, we can create custom menus and branded stickers so the cart feels like it belongs at your event.</p>
+              <p>We have served more than 50 company events, from office celebrations to conferences and brand launches.</p>
+              <p>Choose espresso, freshly whisked matcha, mocktails, or all three. We plan the cart, menu, timing, and guest flow around your event.</p>
             </div>
             <aside class="quick-links" aria-labelledby="corporate-links-title">
               <h2 id="corporate-links-title">Corporate services</h2>
@@ -281,25 +315,6 @@
         </section>
       </article>
 
-      <section class="contact-section" id="inquiry" data-contact-section aria-labelledby="corporate-inquiry-title">
-        <div class="section-shell contact-layout">
-          <div class="contact-heading">
-            <p class="eyebrow">Let us make this easy</p>
-            <h2 id="corporate-inquiry-title">Tell us what you are planning.</h2>
-            <p>Share your date, city, guest count, and timing. We will check availability and recommend the right setup.</p>
-            <ul class="inquiry-reassurance" aria-label="What happens next">
-              <li>A clear recommendation for your event</li>
-              <li>Pricing based on guest count and service</li>
-              <li>Help with venue and branding details</li>
-            </ul>
-          </div>
-          <div class="booking-panel flashquotes-panel" data-flashquotes-embed>
-            <script form-id="cmu6d1dsc000eid04pc006hyj" src="https://app.flashquotes.com/embed.js"></script>
-            <noscript><a class="button button-primary" href="https://app.flashquotes.com/f/qhn9mn" data-lead-cta>Open the quote form</a></noscript>
-            <p class="flashquotes-fallback">Prefer a full screen form? <a href="https://app.flashquotes.com/f/qhn9mn" data-lead-cta>Open Flashquotes</a>. Questions first? Call <a href="tel:+12152728884" data-phone-cta>(215) 272-8884</a>.</p>
-          </div>
-        </div>
-      </section>
     </main>
 
     <a class="floating-book" href="#inquiry" data-lead-cta>Get a quote</a>
