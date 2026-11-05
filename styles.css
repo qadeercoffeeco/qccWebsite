@@ -612,6 +612,11 @@ textarea {
   max-height: 34px;
 }
 
+.logo-track img.logo-capital-one {
+  width: 132px;
+  max-height: 48px;
+}
+
 .logo-track img[src*="ascension"] {
   width: 136px;
 }
@@ -2060,6 +2065,76 @@ body.show-floating .floating-book {
   line-height: 1.4;
 }
 
+.capital-one-case-study-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.62fr);
+  gap: clamp(28px, 6vw, 78px);
+  align-items: end;
+}
+
+.capital-one-case-study-copy h2 {
+  max-width: 880px;
+  margin: 0;
+}
+
+.capital-one-case-study-copy > p {
+  margin: 0 0 4px;
+  color: var(--green-2);
+  font-size: 1.05rem;
+}
+
+.case-study-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: clamp(30px, 5vw, 52px);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--line);
+}
+
+.case-study-stats div {
+  min-height: 128px;
+  padding: 22px;
+  background: var(--paper);
+}
+
+.case-study-stats strong,
+.case-study-stats span {
+  display: block;
+}
+
+.case-study-stats strong {
+  color: var(--green);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  line-height: 1;
+}
+
+.case-study-stats span {
+  margin-top: 8px;
+  color: var(--green-2);
+  font-size: 0.9rem;
+  font-weight: 760;
+}
+
+.capital-one-gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.75fr);
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.capital-one-gallery .photo-card img {
+  width: 100%;
+  height: clamp(360px, 43vw, 600px);
+  object-fit: cover;
+}
+
+.capital-one-gallery-wide img {
+  object-position: center;
+}
+
 .photo-gallery {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 34px;
@@ -2351,6 +2426,19 @@ body.show-floating .floating-book {
     align-items: flex-start;
   }
 
+  .capital-one-case-study-copy,
+  .capital-one-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .capital-one-gallery .photo-card img {
+    height: auto;
+  }
+
   .google-review-grid {
     grid-template-columns: 1fr;
   }
@@ -2369,6 +2457,15 @@ body.show-floating .floating-book {
   .detail-grid,
   .hero-proof {
     grid-template-columns: 1fr;
+  }
+
+  .case-study-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .case-study-stats div {
+    min-height: 108px;
+    padding: 18px;
   }
 
   .press-strip {
