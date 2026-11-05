@@ -2132,7 +2132,7 @@ body.show-floating .floating-book {
 }
 
 .capital-one-gallery-wide img {
-  object-position: center bottom;
+  object-position: center 60%;
 }
 
 .photo-gallery {
