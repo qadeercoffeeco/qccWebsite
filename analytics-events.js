@@ -38,6 +38,14 @@ const readAttribution = (key) => {
   }
 };
 
+const forgetAttribution = (key) => {
+  try {
+    window.sessionStorage.removeItem(`qcc_${key}`);
+  } catch {
+    // Analytics should never interrupt the booking experience.
+  }
+};
+
 attributionKeys.forEach((key) => {
   rememberAttribution(key, pageParameters.get(key));
 });
@@ -61,6 +69,7 @@ document.querySelectorAll('a[href$="#contact"], a[href$="#inquiry"], [data-lead-
 
 document.querySelectorAll('a[href*="app.flashquotes.com/f/"]').forEach((link) => {
   link.addEventListener("click", () => {
+    rememberAttribution("flashquotes_quote_started", String(Date.now()));
     trackAnalyticsEvent("begin_quote", {
       cta_location: getCtaLocation(link),
       page_path: window.location.pathname,
@@ -91,6 +100,7 @@ if (bookingPanel && "IntersectionObserver" in window) {
   const bookingPanelObserver = new IntersectionObserver(
     (entries, observer) => {
       if (entries.some((entry) => entry.isIntersecting)) {
+        rememberAttribution("flashquotes_quote_started", String(Date.now()));
         trackAnalyticsEvent("flashquotes_embed_view", {
           quote_provider: "flashquotes",
           lead_type: bookingPanel.dataset.quoteType || leadType
@@ -105,8 +115,9 @@ if (bookingPanel && "IntersectionObserver" in window) {
 }
 
 const isThankYouPage = /\/thank-you\.html$/.test(window.location.pathname);
-// A direct visit or a lead=1 query alone must not be counted as an inquiry.
-// Keep this fallback limited to a return from the hosted form provider.
+// Prefer the provider referrer. Some browsers suppress referrers during an
+// iframe redirect, so also accept the explicit Flashquotes completion URL
+// when this browser recently displayed or opened the quote form.
 let returnedFromForm = false;
 try {
   returnedFromForm = ["https://app.flashquotes.com", "https://tally.so"]
@@ -114,10 +125,19 @@ try {
 } catch {
   // Direct visits and browsers without a referrer do not confirm a submission.
 }
+const quoteStartedAt = Number(readAttribution("flashquotes_quote_started"));
+const hasRecentQuoteSession = Number.isFinite(quoteStartedAt)
+  && quoteStartedAt > 0
+  && Date.now() - quoteStartedAt < 2 * 60 * 60 * 1000;
+const isFlashquotesCompletion = pageParameters.get("lead") === "1"
+  && pageParameters.get("source") === "flashquotes"
+  && hasRecentQuoteSession;
+const isVerifiedLeadReturn = returnedFromForm || isFlashquotesCompletion;
 const leadTrackingKey = "generate_lead_tracked";
 const leadWasTracked = readAttribution(leadTrackingKey) === "1";
 
-if (isProductionSite && isThankYouPage && returnedFromForm && !leadWasTracked) {
+if (isProductionSite && isThankYouPage && isVerifiedLeadReturn && !leadWasTracked) {
+  const transactionId = quoteStartedAt > 0 ? `qcc-lead-${quoteStartedAt}` : undefined;
   trackAnalyticsEvent("generate_lead", {
     lead_source: readAttribution("utm_source") || "booking_form",
     lead_medium: readAttribution("utm_medium") || "website",
@@ -125,7 +145,9 @@ if (isProductionSite && isThankYouPage && returnedFromForm && !leadWasTracked) {
     lead_type: leadType
   });
   trackAnalyticsEvent("conversion", {
-    send_to: "AW-18470423573/Dq9HCJme4IIdEJWYsedE"
+    send_to: "AW-18470423573/Dq9HCJme4IIdEJWYsedE",
+    transaction_id: transactionId
   });
   rememberAttribution(leadTrackingKey, "1");
+  forgetAttribution("flashquotes_quote_started");
 }
